@@ -1,5 +1,2 @@
 #!/bin/bash
-docker exec -it postgres-db-1 bash
-psql employees -q -c "CREATE TABLE item (id bigint primary key, name varchar(100));"
-psql employees -q -c "CREATE TABLE grp (id bigint primary key, name varchar(100));"
-psql employees -q -c "CREATE TABLE items2grps (items_fk bigint, grps_fk bigint,  primary key (items_fk, grps_fk));"
+docker exec -it postgres-postgres-1 psql --username=postgres -c 'CREATE DATABASE test3' -c '\l'
